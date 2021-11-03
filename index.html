@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word counter</title>
+    <link rel="stylesheet" href="styles/normalize-8.0.1-min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="logo">Word counter</h1>
+      <div id="toggle" class="toggle">
+        <img id="toggle__icon" src="/assets/icons/moon.svg" />
+      </div>
+    </header>
+    <main>
+      <section class="block">
+        <h2>Mensaje</h2>
+        <form>
+          <textarea name="" id="textarea" cols="100" rows="5"></textarea>
+        </form>
+        <p>
+          <span id="words">0</span> words|
+          <span id="characters">0</span> characters
+        </p>
+      </section>
+    </main>
+    <script src="scripts/main.js" type="module"></script>
+  </body>
+</html>

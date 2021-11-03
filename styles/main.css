@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("/assets/fonts/open-sans/OpenSans-Regular.ttf");
+}
+
+:root {
+  --font-main: "Open Sans", sans-serif;
+  --font-size: 16px;
+  --container-width: 1200px;
+  --radius: 10px;
+}
+
+[data-theme="light"] {
+  --background: #ececec;
+  --foreground-primary: #fafafa;
+  --foreground-secondary: #e0e0e0;
+  --text-color-thick: #1f1f1f;
+  --text-color-regular: #434343;
+  --text-color-thin: #676767;
+  --text-color-ultrathin: #8c8c8c;
+  --shadow-color: #e4e4e4;
+  --primary: #007aff;
+  --second: #50e3c2;
+}
+
+[data-theme="dark"] {
+  --background: #181719;
+  --foreground-primary: #27242c;
+  --foreground-secondary: #3d3a41;
+  --text-color-thick: #ffffff;
+  --text-color-regular: #f6f6f6;
+  --text-color-thin: #c2c2c2;
+  --text-color-ultrathin: #bbbbbb;
+  --shadow-color: #161616;
+  --primary: #0a84ff;
+  --second: #73ffe0;
+}
+
+html {
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* ----- BODY -----*/
+body {
+  background-color: var(--background);
+  color: var(--text-color-regular);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ----- HEADER -----*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 5rem;
+  color: var(--text-color-thick);
+  background-color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.nav ul li a {
+  border-radius: var(--radius);
+  display: inline-block;
+  background-color: var(--second);
+  width: 80px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#toggle__icon {
+  width: 25px;
+}
+
+/* ----- MAIN -----*/
+section {
+  margin: 2rem auto;
+  padding: 2em;
+  max-width: var(--container-width);
+  background-color: var(--foreground-primary);
+  border-radius: var(--radius);
+}
+
+textarea {
+  padding: 10px;
+  color: var(--font-main);
+  background-color: var(--foreground-primary);
+  border-radius: var(--radius);
+  max-width: 500px;
+  outline-color: var(--primary);
+}
+
